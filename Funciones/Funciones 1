@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "pilas.h"
+void ingresar()
+{
+	int i=0,g=0;
+	Pila elementos;
+	inicpila(&elementos);
+	printf("Cuantos elementos desea ingresar: \n");
+	scanf("%d",&i);
+	for (g=i;g++)
+	{
+		
+	}
+}
