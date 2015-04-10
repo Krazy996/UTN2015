@@ -21,13 +21,14 @@ main()
 		if (tope(&dada)==tope(&busq))
 		{
 			i=1;
+			apilar(&aux,desapilar(&dada));
 		}
 		else
 		{
 			apilar(&aux, desapilar(&dada));
 		}
 	}
-	if (i=1)
+	if (i==1)
 	{
 		printf("El valor que busco se encuentra el la pila \n");
 	}
