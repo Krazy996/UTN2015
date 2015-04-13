@@ -8,6 +8,7 @@ main()
 	inicpila(&elementos);
 	ingresar_elementos(&elementos);
 	mostrar(&elementos);
+	system("pause");
 	return(0);
 }
 //Declaracion de funciones...
