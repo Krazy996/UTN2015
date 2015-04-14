@@ -9,7 +9,6 @@ main()
 	inicpila(&origen);
 	inicpila(&destino);
 	ingresar_elementos(&origen);
-	pasar_a_destino(&origen,&destino);
 	//pasar_en_orden();
 	mostrar(&destino);
 	system("pause");
