@@ -14,7 +14,7 @@ main()
 	ingresar_elementos(&origen);
 	buscar_menor(&origen,&otra,&men);
 	mostrar(&origen);
-	printf("El menor valor de la pila %d",men);
+	printf("El menor valor de la pila %d \n",men);
 	system("pause");
 	return 0;
 }
