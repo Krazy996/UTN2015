@@ -5,11 +5,13 @@ void ingresar_elementos(Pila *);
 void pasar_a_otra(Pila *origen, Pila *destino);
 main()
 {
-	Pila origen,destino,aux;
+	Pila origen,destino,otra;
 	inicpila(&origen);
-	inicpila(&aux);
+	inicpila(&otra);
 	ingresar_elementos(&origen);
-	mostrar(&);
+	buscar_menor(&origen,&otra)
+	mostrar(&origen);
+	mostrar
 	system("pause");
 	return(0);
 }
@@ -29,26 +31,37 @@ void ingresar_elementos(Pila *origen)
 }
 //
 //
-void pasar_a_otra(Pila *origen,Pila *aux)
+void pasar_a_otra(Pila *origen,Pila *otra)
 {
 	while(!pilavacia(origen))
 	{
-		apilar(aux, desapilar(origen));
+		apilar(otra, desapilar(origen));
 	}
 }
-void buscar_menor(Pila *origen, Pila *aux)
+void buscar_menor(Pila *origen, Pila *otra)
 {
-	Pila menor,comparar;
+	Pila menor,comparar,aux;
 	inicpila(&menor);
-	inicpila(&comparar)
-	pasar_a_otra(origen,aux);
-	while(!pilavacia(aux))
+	inicpila(&aux);
+	inicpila(&comparar);
+	pasar_a_otra(origen,otra);
+	while(!pilavacia(otra))
 	{
-		tope(&comparar)=tope(aux);
-		pasar_a_otra(aux,origen);
+		tope(&comparar)=tope(otra);
+		pasar_a_otra(otra,origen);
 		if (pilavacia(&comparar))
 		{
 			apilar(&menor,desapilar(comparar));
 		}
+		if (tope(&dada)<tope(&comparar))
+		{
+			apilar(&aux, desapilar(&menor));
+			apilar(&menor, desapilar(&comparar));
+		}
+		else
+		{
+			apilar(&aux, desapilar(&dada));
+		}
 	}
+	pasar_a_otra(otra,origen);
 }
