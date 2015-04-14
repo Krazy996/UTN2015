@@ -67,5 +67,6 @@ int buscar_menor(Pila *origen, Pila *otra, int *men)
 		}
 	}
 	pasar_a_otra(otra,origen);
-	tope(&menor)==men;
+	mostrar(&menor);
+	//men==tope(&menor);
 }
