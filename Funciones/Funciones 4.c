@@ -63,9 +63,9 @@ int buscar_menor(Pila *origen, Pila *otra, int *men)
 		}
 		else
 		{
-			apilar(&aux, desapilar(&dada));
+			apilar(&aux, desapilar(&comparar));
 		}
 	}
 	pasar_a_otra(otra,origen);
-	tope(&menor)=men;
+	tope(&menor)==men;
 }
