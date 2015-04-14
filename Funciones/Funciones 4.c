@@ -2,16 +2,19 @@
 #include <stdlib.h>
 #include "pila.h"
 void ingresar_elementos(Pila *);
-void pasar_a_otra(Pila *origen, Pila *destino);
+void pasar_a_otra(Pila *origen, Pila *otra);
+int buscar_menor(Pila *origen, Pila *otra, int *men);
 main()
 {
 	Pila origen,destino,otra;
+	int men;
+	men=0;
 	inicpila(&origen);
 	inicpila(&otra);
 	ingresar_elementos(&origen);
-	buscar_menor(&origen,&otra)
+	buscar_menor(&origen,&otra,&men);
 	mostrar(&origen);
-	mostrar
+	printf("El menor valor de la pila %d",men);
 	system("pause");
 	return(0);
 }
@@ -38,8 +41,9 @@ void pasar_a_otra(Pila *origen,Pila *otra)
 		apilar(otra, desapilar(origen));
 	}
 }
-void buscar_menor(Pila *origen, Pila *otra)
+int buscar_menor(Pila *origen, Pila *otra, int *men)
 {
+	int men;
 	Pila menor,comparar,aux;
 	inicpila(&menor);
 	inicpila(&aux);
@@ -64,4 +68,5 @@ void buscar_menor(Pila *origen, Pila *otra)
 		}
 	}
 	pasar_a_otra(otra,origen);
+	tope(&menor)=men;
 }
