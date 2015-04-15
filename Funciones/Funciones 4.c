@@ -14,8 +14,6 @@ main()
 	system("pause");
 	return 0;
 }
-//Declaracion de funciones...
-//
 void ingresar_elementos(Pila *origen)
 {
 	int op;
@@ -28,8 +26,6 @@ void ingresar_elementos(Pila *origen)
 		scanf("%d",&op);
 	}while(op==1);
 }
-//
-//
 void pasar_a_otra(Pila *origen,Pila *otra)
 {
 	while(!pilavacia(origen))
@@ -45,7 +41,6 @@ void buscar_menor(Pila *origen, Pila *otra)
 	inicpila(&aux);
 	inicpila(&comparar);
 	pasar_a_otra(origen,otra);
-	//
 	while(!pilavacia(otra)){
 	apilar(&comparar, tope(otra));
 	apilar(origen,desapilar(otra));
