@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pila.h"
+#include "pila.h"     
 void ingresar_elementos(Pila *);
 void pasar_a_otra(Pila *origen, Pila *otra);
 void buscar_menor(Pila *origen, Pila *otra);
@@ -41,9 +41,10 @@ void buscar_menor(Pila *origen, Pila *otra)
 	inicpila(&aux);
 	inicpila(&comparar);
 	pasar_a_otra(origen,otra);
-	while(!pilavacia(otra)){
-	apilar(&comparar, tope(otra));
-	apilar(origen,desapilar(otra));
+	while(!pilavacia(otra))
+	{
+		apilar(&comparar, tope(otra));
+		apilar(origen,desapilar(otra));
 	}
 	while(!pilavacia(&comparar))
 	{
