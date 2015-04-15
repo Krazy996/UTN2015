@@ -48,11 +48,14 @@ int buscar_menor(Pila *origen, Pila *otra, int *men)
 	inicpila(&aux);
 	inicpila(&comparar);
 	pasar_a_otra(origen,otra);
-	while(!pilavacia(otra))
+	//
+	while(!pilavacia(otra)){
+	apilar(&comparar, tope(otra));
+	apilar(origen,desapilar(otra));
+	}
+	while(!pilavacia(&comparar))
 	{
-		tope(&comparar)==tope(otra);
-		pasar_a_otra(otra,origen);
-		if (pilavacia(&comparar))
+	    if (pilavacia(&menor))
 		{
 			apilar(&menor,desapilar(&comparar));
 		}
@@ -66,7 +69,7 @@ int buscar_menor(Pila *origen, Pila *otra, int *men)
 			apilar(&aux, desapilar(&comparar));
 		}
 	}
-	pasar_a_otra(otra,origen);
 	mostrar(&menor);
-	//men==tope(&menor);
+    mostrar(&aux);
+	*men=tope(&menor);
 }
