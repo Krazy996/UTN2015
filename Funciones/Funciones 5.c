@@ -30,7 +30,8 @@ void ingresar_elementos(Pila *origen)
 //
 void ordenadar(Pila *origen)
 {
-	Pila desordenada,ordenada,aux;
+	Pila desordenada,ordenada,aux,aux2;
+	inicpila(&aux2);
 	inicpila(&aux);
 	inicpila(&ordenada);
 	inicpila(&desordenada);
@@ -51,7 +52,7 @@ void ordenadar(Pila *origen)
 		{
 			apilar(&ordenada,desapilar(&desordenada));
 		}
-		while(pilavacia(&aux))
+		while(!pilavacia(&desordenada))
 		{
 			if (tope(&ordenada)>tope(&desordenada))
 			{
@@ -63,7 +64,10 @@ void ordenadar(Pila *origen)
 				apilar(&aux, desapilar(&desordenada));
 			}
 		}
-		while(pilavacia(&aux)
+		while(!pilavacia(&aux))
+		{
+			apilar(de)
+		}
 	}	
 	printf("ordenada\n");
 	mostrar(&ordenada);
