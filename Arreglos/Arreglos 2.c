@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+int cargar(int datos[], int dimension);
 main()
 {
 	int cant,i;
 	int datos[10];
-	cant=cargar(datos,10);
+	cant= cargar(datos,10);
 	for (i=0;i<cant;i++)
     {
         printf("%d \n",datos[i]);

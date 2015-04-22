@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pila.h"
+#include <pila.h>
+#include <pila.c>
 main()
 {
 	Pila p;
@@ -14,6 +15,6 @@ main()
 		g++;
 	}
 	printf("la suma de la pila es de %d \n",suma );
-	getch();
+	//getch();
 	return(0);
 }

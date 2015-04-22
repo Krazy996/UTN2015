@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+int cargar(int datos[], int dimension);
 main()
 {
 	int cant;
