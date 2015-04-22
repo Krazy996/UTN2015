@@ -2,10 +2,14 @@
 #include <stdlib.h>
 main()
 {
-	int cant;
+	int cant,i,sum=0;
 	int datos[10];
 	cant=cargar(datos,10);
-	printf("%d",cant);
+	for (i=0;i<cant;i++)
+    {
+        sum=sum+datos[i];
+    }
+    printf("\n %d \n",sum);
 }
 /*
 FUNCIONES

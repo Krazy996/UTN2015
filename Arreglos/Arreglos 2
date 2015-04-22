@@ -2,10 +2,13 @@
 #include <stdlib.h>
 main()
 {
-	int cant;
+	int cant,i;
 	int datos[10];
 	cant=cargar(datos,10);
-	printf("%d",cant);
+	for (i=0;i<cant;i++)
+    {
+        printf("%d \n",datos[i]);
+    }
 }
 /*
 FUNCIONES
