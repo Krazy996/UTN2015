@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-int cargar(int datos[], int dimension);
 main()
 {
 	int cant;
@@ -11,21 +10,18 @@ main()
 /*
 FUNCIONES
 */
-int cargar(int datos[], int dimension)
-{
+{int cargar(int datos[], int dimension)
 	int i = 0;
 	char control = 's';
 	do {
         printf("Ingresar número entero: \n");
 		fflush(stdin);
 		scanf("%d",&datos[i]);
-
 		printf("Desea seguir cargando elementos?:\n s/n \n");
 		fflush(stdin);
 		scanf("%c",&control);
 		i++;
 		printf("cantidad: %d \n", i);
 	} while (i < dimension && control =='s');
-
 	return i;
 }
