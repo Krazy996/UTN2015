@@ -29,6 +29,8 @@ int cargar(int datos[], int dimension)
 	} while (i < dimension && control =='s');
 	return i;
 }
+//
+//
 void mostra(int cant, int datos[])
 {
 	int i;

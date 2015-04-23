@@ -26,6 +26,8 @@ int cargar(int datos[], int dimension)
 	} while (i < dimension && control =='s');
 	return i;
 }
+//
+//
 int suma(int cant, int datos[])
 {
 	int sum=0,i;
