@@ -10,7 +10,8 @@ main()
 /*
 FUNCIONES
 */
-{int cargar(int datos[], int dimension)
+int cargar(int datos[], int dimension)
+{
 	int i = 0;
 	char control = 's';
 	do {
