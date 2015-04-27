@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
+int cargar(int datos[], int dimension);
+int suma(int cant, int datos[]);
 main()
 {
-	int cant,i;
+	int cant,i,sum;
 	int datos[10];
 	cant=cargar(datos,10);
 	sum=suma(cant,datos);
